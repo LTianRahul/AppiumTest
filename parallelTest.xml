@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CrossPlatformSuite" parallel="tests">
+  <test name="Emulator Test">
+	 
+	 <parameter name="deviceName" value="Pixel_5"/>
+	  <parameter name="platformName" value="android"/>
+	   <parameter name="platformVersion" value="10"/>
+	    <parameter name="udid" value="emulator-5554"/>
+	     <parameter name="appPackage" value="com.example.onclicklisteners"/>
+	      <parameter name="appActivity" value="com.example.onclicklisteners.MainActivity"/>
+	       <parameter name="appiumServer" value="http://127.0.0.1:4723/wd/hub"/>
+	 
+	 <classes>
+		 <class name="appiumtest.CalTest"/>
+	 </classes>
+  </test> 
+  
+  <test name="Real Device Test">
+	   <parameter name="deviceName" value="Galaxy Tab A7"/>
+	  <parameter name="platformName" value="android"/>
+	   <parameter name="platformVersion" value="12"/>
+	    <parameter name="udid" value="R9WN91TLGBJ"/>
+	     <parameter name="appPackage" value="com.example.onclicklisteners"/>
+	      <parameter name="appActivity" value="com.example.onclicklisteners.MainActivity"/>
+	       <parameter name="appiumServer" value="http://127.0.0.1:4725/wd/hub"/>
+	       
+	       <classes>
+		 <class name="appiumtest.realDeviceTesting"/>
+	 </classes>
+  </test> 
+</suite>

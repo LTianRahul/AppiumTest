@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <test name="AppTest on Android">
+        <parameter name="version" value="16"/>
+      <parameter name="platform" value="ios"/>
+        <parameter name="device" value="iPhone 14"/>
+        <classes>
+            <class name="appiumtest.AndroidApponLT"/>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Mobile" parallel="tests" thread-count="2">
+
+
+    <test name="AppTest 1">
+        <parameter name="version" value="13"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="device" value="Galaxy S23 Ultra"/>
+        <classes>
+            <class name="appiumtest.AndroidApponLT"/>
+        </classes>
+    </test>
+
+    <test name="AppTest 2">
+        <parameter name="version" value="13"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="device" value="Galaxy S23"/>
+        <classes>
+            <class name="appiumtest.AndroidApponLT"/>
+        </classes>
+    </test>
+</suite>

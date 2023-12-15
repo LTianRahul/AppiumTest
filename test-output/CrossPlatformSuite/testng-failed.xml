@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [CrossPlatformSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Emulator Test(failed)">
+    <parameter name="appPackage" value="com.example.onclicklisteners"/>
+    <parameter name="appActivity" value="com.example.onclicklisteners.MainActivity"/>
+    <parameter name="platformVersion" value="10"/>
+    <parameter name="appiumServer" value="http://127.0.0.1:4723/wd/hub"/>
+    <parameter name="platformName" value="android"/>
+    <parameter name="udid" value="emulator-5554"/>
+    <parameter name="deviceName" value="Pixel_5"/>
+    <classes>
+      <class name="appiumtest.CalTest">
+        <methods>
+          <include name="openOnClickListenersOnEmulator"/>
+        </methods>
+      </class> <!-- appiumtest.CalTest -->
+    </classes>
+  </test> <!-- Emulator Test(failed) -->
+  <test thread-count="5" parallel="tests" name="Real Device Test(failed)">
+    <parameter name="appPackage" value="com.example.onclicklisteners"/>
+    <parameter name="appActivity" value="com.example.onclicklisteners.MainActivity"/>
+    <parameter name="platformVersion" value="12"/>
+    <parameter name="appiumServer" value="http://127.0.0.1:4725/wd/hub"/>
+    <parameter name="platformName" value="android"/>
+    <parameter name="udid" value="R9WN91TLGBJ"/>
+    <parameter name="deviceName" value="Galaxy Tab A7"/>
+    <classes>
+      <class name="appiumtest.realDeviceTesting">
+        <methods>
+          <include name="openOnClickListenersOnRealDevice"/>
+          <include name="testOne"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- appiumtest.realDeviceTesting -->
+    </classes>
+  </test> <!-- Real Device Test(failed) -->
+</suite> <!-- Failed suite [CrossPlatformSuite] -->
