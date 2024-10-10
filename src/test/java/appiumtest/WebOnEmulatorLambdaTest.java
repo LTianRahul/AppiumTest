@@ -36,19 +36,20 @@ public class WebOnEmulatorLambdaTest {
 //        ltOptions.put("platformName", "ios");
 //        ltOptions.put("deviceName", "iPhone 11");
 //        ltOptions.put("platformVersion", "13.0");
-        ltOptions.put("platformName", "Android");
-        ltOptions.put("deviceName", "Galaxy S23");
-        ltOptions.put("platformVersion", "14");
+        ltOptions.put("platformName", "ios");
+        ltOptions.put("deviceName", "iPad (9th generation)");
+        ltOptions.put("platformVersion", "16.0");
         //ltOptions.put("browserName", "Chrome");
         ltOptions.put("build", "debug");
         ltOptions.put("user","rahulkumarlambdatest");
         ltOptions.put("visual", true);
+        ltOptions.put("app", "lt://APP1016053741710174003248280");
         //ltOptions.put("appiumVersion", "1.22.3");
         ltOptions.put("accessKey", "dboZK7so8koMnIR1tN11aKfMgxyKtDpb90IlyaCj4n6n7tQeK6");
         // ltOptions.put("name", platform+" "+device+" "+version);
         //`ltOptions.put("isRealMobile", true);
       //  ltOptions.put("region", "eu");
-//        Map<String, String> map = new HashMap();
+//        Map<String, String> map = new HashMap(); //APP1016053741710174003248280
 //        map.put("was-secret", "ey1adigppewebmob");
 //        ltOptions.put("customHeaders",map);
         capabilities.setCapability("LT:Options", ltOptions);
@@ -56,7 +57,7 @@ public class WebOnEmulatorLambdaTest {
 //        String gridUrl = "@mobile-hub.lambdatest.com/wd/hub";
 //        String hub = "https://" + userName + ":" + accessKey + gridURL;
 
-        driver = new RemoteWebDriver(new URL("https://hub.lambdatest.com/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL("https://mobile-hub.lambdatest.com/wd/hub"), capabilities);
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -67,25 +68,25 @@ public class WebOnEmulatorLambdaTest {
     public void basicTest() throws InterruptedException {
         System.out.println("Loading Url");
         Thread.sleep(100);
-        driver.get("https://lambdatest.github.io/sample-todo-app/");
-
-        System.out.println("Checking Box");
-        driver.findElement(By.name("li1")).click();
-
-        System.out.println("Checking Another Box");
-        driver.findElement(By.name("li2")).click();
-
-        System.out.println("Checking Box");
-        driver.findElement(By.name("li3")).click();
-
-        System.out.println("Checking Another Box");
-        driver.findElement(By.name("li4")).click();
-
-        driver.findElement(By.id("sampletodotext")).sendKeys(" List Item 6");
-        driver.findElement(By.id("addbutton")).click();
-
-        driver.findElement(By.id("sampletodotext")).sendKeys(" List Item 7");
-        driver.findElement(By.id("addbutton")).click();
+//        driver.get("https://lambdatest.github.io/sample-todo-app/");
+//
+//        System.out.println("Checking Box");
+//        driver.findElement(By.name("li1")).click();
+//
+//        System.out.println("Checking Another Box");
+//        driver.findElement(By.name("li2")).click();
+//
+//        System.out.println("Checking Box");
+//        driver.findElement(By.name("li3")).click();
+//
+//        System.out.println("Checking Another Box");
+//        driver.findElement(By.name("li4")).click();
+//
+//        driver.findElement(By.id("sampletodotext")).sendKeys(" List Item 6");
+//        driver.findElement(By.id("addbutton")).click();
+//
+//        driver.findElement(By.id("sampletodotext")).sendKeys(" List Item 7");
+//        driver.findElement(By.id("addbutton")).click();
     }
 
     @AfterMethod

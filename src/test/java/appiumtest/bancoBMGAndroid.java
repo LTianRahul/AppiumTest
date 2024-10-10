@@ -52,7 +52,7 @@ public class bancoBMGAndroid {
 			// ltOptions.put("appium:automationName", "flutter");
 			// ltOptions.put("appium:appiumVersion", "2.0"); //1.19.0 in emulator default,
 			// 1.22.3 in RD default
-//            ltOptions.put("isRealMobile", false);
+           // ltOptions.put("isRealMobile", true);
 			// ltOptions.put("visual", true);
 //            ltOptions.put("performance", true);
 
@@ -62,14 +62,14 @@ public class bancoBMGAndroid {
 			// ltOptions.put("udid", "785ded9f");
 			// ltOptions.put("passcode", "098765");
 
-            capabilities.setCapability("smartUI.project", "real-device-android-SmartUI Test");
+           // capabilities.setCapability("smartUI.project", "real-device-android-SmartUI Test");
 
 			capabilities.setCapability("lt:options", ltOptions);
 
 //            String hub = "https://" + userName + ":" + accessKey + gridURL;
 //            AppiumDriver driver = new AppiumDriver(new URL(hub), capabilities);
 
-			driver = new RemoteWebDriver(new URL("https://" + userName + ":" + accessKey + "@hub.lambdatest.com/wd/hub"),
+			driver = new RemoteWebDriver(new URL("https://" + userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub"),
 					capabilities);
 
 			System.out.println("App started on Real device......");

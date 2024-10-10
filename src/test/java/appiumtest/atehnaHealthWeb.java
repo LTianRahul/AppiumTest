@@ -51,12 +51,16 @@ public class atehnaHealthWeb {
        // ltOptions.put("name", "test 1 "+ LocalDate.now());
         ltOptions.put("build", "athena");
         ltOptions.put("browserName", "chrome");
-        ltOptions.put("platformName", "win 10");
-        ltOptions.put("browserVersion", "115");
-        ltOptions.put("selenium_version", "4.13.0");
+        ltOptions.put("platformName", "macOS Sonoma");
+        ltOptions.put("browserVersion", "123.0");
+//        ltOptions.put("selenium_version", "4.13.0");
         ltOptions.put("visual",true);
         ltOptions.put("console",true);
+        ltOptions.put("selenium_version","latest");
         ltOptions.put("performance", true);
+        ltOptions.put("network", true);
+        ltOptions.put("network.har", true);
+        ltOptions.put("network.full.har", true);
        // ltOptions.put("video",false);
         capabilities.setCapability("lt:options", ltOptions);
 
@@ -185,7 +189,7 @@ public class atehnaHealthWeb {
 //
 //            driver.findElement(By.id("g_cta_ah__0_0 SubmitButton")).click();
 //            Thread.sleep(5000);
-
+            driver.executeScript("lambda:network");
             status="passed";
         }
         catch (Exception e)

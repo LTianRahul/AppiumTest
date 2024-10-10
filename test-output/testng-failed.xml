@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="appiumtest.atehnaHealthWeb">
+      <class name="appiumtest.gmaNetwork">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testSimple"/>
+          <include name="tearDown"/>
+          <include name="testAdsDetails"/>
         </methods>
-      </class> <!-- appiumtest.atehnaHealthWeb -->
+      </class> <!-- appiumtest.gmaNetwork -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

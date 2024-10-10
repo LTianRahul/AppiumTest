@@ -33,8 +33,8 @@ public class mobileWebOnEmulator
          HashMap<String, Object> ltOptions = new HashMap<String, Object>();
          ltOptions.put("w3c", true);
         ltOptions.put("platformName", "android");
-         ltOptions.put("deviceName", "Galaxy S22 5G");
-         ltOptions.put("platformVersion", "12");
+         ltOptions.put("deviceName", "Galaxy S23 Plus");
+         ltOptions.put("platformVersion", "14");
       ltOptions.put("app", "lt://APP10160161211700671147522636");
         //capabilities.setCapability("privateCloud", true);
          ltOptions.put("build", "SmartUI - Real Device Native App");

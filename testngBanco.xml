@@ -9,4 +9,5 @@
             <class name="appiumtest.bancoBMGAndroid"/>
         </classes>
     </test>
+  
 </suite> <!-- Suite -->
